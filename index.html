@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Certified Kubernetes Hacker with Vi" /><meta name="author" content="Nhâm Chấn Vĩ - Kubernetes Hacker" /><link rel="canonical" href="https://ckh.withvi.com/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Certified Kubernetes Hacker</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Certified Kubernetes Hacker";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/";
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Certified Kubernetes Hacker
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-basics/">Kubernetes Basics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="pentesting-kubernetes-services/">Pentesting Kubernetes Services</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="exposing-services-in-kubernetes/">Exposing Services in Kubernetes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="attacking-kubernetes-from-inside-a-pod/">Attacking Kubernetes from inside a Pod</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-enumeration/">Kubernetes Enumeration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-role-based-access-control/">Kubernetes Role-Based Access Control (RBAC)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="abusing-roles-clusterroles-in-kubernetes/">Abusing Roles/ClusterRoles in Kubernetes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-namespace-escalation/">Kubernetes Namespace Escalation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-access-to-other-clouds/">Kubernetes Access to other Clouds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-hardening/">Kubernetes Hardening</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="kubernetes-network-attacks/">Kubernetes Network Attacks</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Certified Kubernetes Hacker</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Certified Kubernetes Hacker</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/withvi/ckh.github.io/edit/master/docs/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="certified-kubernetes-hacker">Certified Kubernetes Hacker<a class="headerlink" href="#certified-kubernetes-hacker" title="Permanent link">&para;</a></h1>
+<h2 id="kubernetes-basics">Kubernetes Basics<a class="headerlink" href="#kubernetes-basics" title="Permanent link">&para;</a></h2>
+<p>If you don't know anything about Kubernetes this is a good start. Read it to learn about the architecture, components and basic actions in Kubernetes:</p>
+<p><a href="kubernetes-basics/">Kubernetes Basics</a></p>
+<h2 id="pentesting-kubernetes">Pentesting Kubernetes<a class="headerlink" href="#pentesting-kubernetes" title="Permanent link">&para;</a></h2>
+<h3 id="from-the-outside">From the Outside<a class="headerlink" href="#from-the-outside" title="Permanent link">&para;</a></h3>
+<p>There are several possible Kubernetes services that you could find exposed on the Internet (or inside internal networks). If you find them you know there is Kubernetes environment in there.
+Depending on the configuration and your privileges you might be able to abuse that environment, for more information:</p>
+<p><a href="pentesting-kubernetes-services/">Pentesting Kubernetes Services</a></p>
+<h3 id="enumeration-inside-a-pod">Enumeration inside a Pod<a class="headerlink" href="#enumeration-inside-a-pod" title="Permanent link">&para;</a></h3>
+<p>If you manage to compromise a Pod read the following page to learn how to enumerate and try to escalate privileges/escape:</p>
+<p><a href="exposing-services-in-kubernetes/">Exposing Services in Kubernetes</a>
+<a href="attacking-kubernetes-from-inside-a-pod/">Attacking Kubernetes from inside a Pod</a></p>
+<h3 id="enumerating-kubernetes-with-credentials">Enumerating Kubernetes with Credentials<a class="headerlink" href="#enumerating-kubernetes-with-credentials" title="Permanent link">&para;</a></h3>
+<p>You might have managed to compromise user credentials, a user token or some service account token. You can use it to talk to the Kubernetes API service and try to enumerate it to learn more about it:</p>
+<p><a href="kubernetes-enumeration/">Kubernetes Enumeration</a></p>
+<p>Another important details about enumeration and Kubernetes permissions abuse is the Kubernetes Role-Based Access Control (RBAC). If you want to abuse permissions, you first should read about it here:</p>
+<p><a href="kubernetes-role-based-access-control/">Kubernetes Role-Based Access Control (RBAC)</a></p>
+<p>Knowing about RBAC and having enumerated the environment you can now try to abuse the permissions with:</p>
+<p><a href="abusing-roles-clusterroles-in-kubernetes/">Abusing Roles/ClusterRoles in Kubernetes</a></p>
+<h3 id="privesc-to-a-different-namespace">Privesc to a different Namespace<a class="headerlink" href="#privesc-to-a-different-namespace" title="Permanent link">&para;</a></h3>
+<p>If you have compromised a namespace you can potentially escape to other namespaces with more interesting permissions/resources:</p>
+<p><a href="kubernetes-namespace-escalation/">Kubernetes Namespace Escalation</a></p>
+<h3 id="from-kubernetes-to-the-cloud">From Kubernetes to the Cloud<a class="headerlink" href="#from-kubernetes-to-the-cloud" title="Permanent link">&para;</a></h3>
+<p>If you have compromised a K8s account or a pod, you might be able able to move to other clouds. This is because in clouds like AWS or GCP is possible to give a K8s SA permissions over the cloud.</p>
+<p><a href="kubernetes-access-to-other-clouds/">Kubernetes Access to other Clouds</a></p>
+<h3 id="kubernetes-hardening">Kubernetes Hardening<a class="headerlink" href="#kubernetes-hardening" title="Permanent link">&para;</a></h3>
+<p><a href="kubernetes-hardening/">Kubernetes Hardening</a></p>
+<h3 id="kubernetes-network-attacks">Kubernetes Network Attacks<a class="headerlink" href="#kubernetes-network-attacks" title="Permanent link">&para;</a></h3>
+<p><a href="kubernetes-network-attacks/">Kubernetes Network Attacks</a></p>
+<h2 id="labs-to-practice-and-learn">Labs to practice and learn<a class="headerlink" href="#labs-to-practice-and-learn" title="Permanent link">&para;</a></h2>
+<p><a href="https://securekubernetes.com/">https://securekubernetes.com/</a></p>
+<p><a href="https://madhuakula.com/kubernetes-goat/index.html">https://madhuakula.com/kubernetes-goat/index.html</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Nhâm Chấn Vĩ</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/withvi/ckh.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.3.0
+Build Date UTC : 2022-06-02 11:36:31.138012+00:00
+-->
